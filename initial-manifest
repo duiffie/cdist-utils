@@ -49,7 +49,7 @@ include() {
    # reset SOURCESTACK when this function is called from a new manifest
    if [[ ! " ${SOURCESTACK[*]} " =~ " ${manifest} " ]]; then
       SOURCESTACK=("${manifest}")
-   fi 
+   fi
 
    for i in "${SOURCESTACK[@]}}"; do 
       if test "${i}" = "${include_manifest}"; then
@@ -58,7 +58,7 @@ include() {
          file=$(basename "${file}")
          echo "ERROR: Circular/multiple include(s) of ${1} in manifest ${file}"
          exit 1
-      fi 
+      fi
    done
 
    if ! test -z "${include_manifest}"; then
