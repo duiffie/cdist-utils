@@ -51,7 +51,7 @@ include() {
       SOURCESTACK=("${manifest}")
    fi
 
-   for i in "${SOURCESTACK[@]}}"; do 
+   for i in "${SOURCESTACK[@]}}"; do
       if test "${i}" = "${include_manifest}"; then
          read line func file < <(caller)
          test -z "${file}" && file="${func}"
